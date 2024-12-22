@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Materi HTML - Around HTML&CSS</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">Around HTML&CSS</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a href="index.html" class="nav-link">Beranda</a></li>
+                    <li class="nav-item"><a href="materi.html" class="nav-link active">Materi</a></li>
+                    <li class="nav-item"><a href="tentang.html" class="nav-link">Tentang</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section id="materiHTML" class="py-5">
+        <div class="container">
+            <h2 class="text-center fw-bold mb-4">Materi HTML</h2>
+
+            <h3>1. Sejarah dan Pengertian HTML</h3>
+            <p><strong>Pengertian HTML:</strong> HTML (HyperText Markup Language) adalah bahasa standar untuk membuat halaman web. HTML mendefinisikan struktur dan layout halaman web dengan menggunakan elemen-elemen seperti heading, paragraf, link, gambar, dan lainnya. HTML bukanlah bahasa pemrograman, melainkan bahasa markup yang memberikan instruksi kepada browser bagaimana menampilkan konten.</p>
+            <p><strong>Sejarah HTML:</strong></p>
+            <ul>
+                <li><strong>Diciptakan oleh Tim Berners-Lee (1991):</strong> HTML dikembangkan pertama kali oleh Tim Berners-Lee. Pada tahun 1991, ia merilis versi pertama HTML sebagai alat untuk berbagi informasi dalam jaringan World Wide Web (WWW).</li>
+                <li><strong>HTML 2.0 (1995):</strong> Versi resmi pertama yang distandarisasi oleh Internet Engineering Task Force (IETF), menambahkan fitur seperti form.</li>
+                <li><strong>HTML 3.2 dan 4.0 (1997 dan 1999):</strong> Memperkenalkan elemen tata letak kompleks seperti tabel dan mendukung CSS.</li>
+                <li><strong>XHTML (2000):</strong> Evolusi dari HTML 4.0 dengan prinsip-prinsip XML.</li>
+                <li><strong>HTML5 (2014):</strong> Versi terbaru dan paling canggih dari HTML, memperkenalkan elemen multimedia dan struktur semantik.</li>
+            </ul>
+
+            <h3>2. Struktur Dasar HTML</h3>
+            <p>Setiap halaman HTML memiliki struktur dasar yang sama, yang terdiri dari elemen-elemen berikut:</p>
+            <ul>
+                <li><code>&lt;!DOCTYPE html&gt;</code>: Deklarasi bahwa dokumen ini menggunakan HTML5.</li>
+                <li><code>&lt;html&gt;</code>: Elemen root yang mencakup seluruh konten.</li>
+                <li><code>&lt;head&gt;</code>: Bagian metadata (seperti judul, link ke stylesheet, charset).</li>
+                <li><code>&lt;body&gt;</code>: Tempat konten halaman web ditampilkan.</li>
+            </ul>
+            <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;Judul Halaman&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    Konten halaman web.
+  &lt;/body&gt;
+&lt;/html&gt;
+            </pre>
+
+            <h3>3. Elemen Dasar HTML</h3>
+            <ul>
+                <li><strong>Heading:</strong> Digunakan untuk membuat judul dalam berbagai ukuran, dari <code>&lt;h1&gt;</code> (terbesar) hingga <code>&lt;h6&gt;</code> (terkecil).</li>
+                <pre>
+&lt;h1&gt;Ini Heading 1&lt;/h1&gt;
+&lt;h2&gt;Ini Heading 2&lt;/h2&gt;
+...
+&lt;h6&gt;Ini Heading 6&lt;/h6&gt;
+                </pre>
+                <li><strong>Paragraf:</strong> Elemen <code>&lt;p&gt;</code> digunakan untuk membuat blok teks sebagai paragraf.</li>
+                <pre>&lt;p&gt;Ini adalah sebuah paragraf.&lt;/p&gt;</pre>
+                <li><strong>Link:</strong> Elemen <code>&lt;a&gt;</code> digunakan untuk membuat hyperlink.</li>
+                <pre>&lt;a href="https://www.example.com"&gt;Ini adalah link&lt;/a&gt;</pre>
+                <li><strong>Gambar:</strong> Elemen <code>&lt;img&gt;</code> digunakan untuk menampilkan gambar.</li>
+                <pre>&lt;img src="gambar.jpg" alt="Deskripsi gambar"&gt;</pre>
+                <li><strong>Daftar:</strong> <code>&lt;ol&gt;</code> untuk daftar bernomor dan <code>&lt;ul&gt;</code> untuk daftar dengan bullet.</li>
+                <pre>
+&lt;ul&gt;
+  &lt;li&gt;Item 1&lt;/li&gt;
+  &lt;li&gt;Item 2&lt;/li&gt;
+&lt;/ul&gt;
+                </pre>
+            </ul>
+
+            <h3>4. Fitur Lanjutan HTML</h3>
+            <ul>
+                <li><strong>Multimedia:</strong> Elemen <code>&lt;audio&gt;</code> dan <code>&lt;video&gt;</code> untuk menambahkan media.</li>
+                <pre>
+&lt;audio controls&gt;
+  &lt;source src="audio.mp3" type="audio/mp3"&gt;
+&lt;/audio&gt;
+
+&lt;video controls&gt;
+  &lt;source src="video.mp4" type="video/mp4"&gt;
+&lt;/video&gt;
+                </pre>
+                <li><strong>Canvas:</strong> Elemen <code>&lt;canvas&gt;</code> digunakan untuk menggambar grafik menggunakan JavaScript.</li>
+                <pre>
+&lt;canvas id="myCanvas" width="200" height="100"&gt;&lt;/canvas&gt;
+&lt;script&gt;
+  let c = document.getElementById("myCanvas");
+  let ctx = c.getContext("2d");
+  ctx.fillStyle = "#FF0000";
+  ctx.fillRect(20, 20, 150, 100);
+&lt;/script&gt;
+                </pre>
+            </ul>
+
+            <h3>Kesimpulan</h3>
+            <p>HTML adalah bahasa markup yang membangun struktur dasar halaman web. Elemen seperti heading, paragraf, gambar, dan link menyusun konten halaman, memberikan hierarki informasi, dan menyiapkan fondasi bagi desain visual.</p>
+        </div>
+
+        <div class="text-center">
+            <a href="materi.html" class="btn btn-secondary">Kembali ke Materi</a>
+        </div>
+    </section>
+
+    <footer class="bg-dark text-white py-3">
+        <div class="container text-center">
+            <p>&copy; 2024 Belajar Coding. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

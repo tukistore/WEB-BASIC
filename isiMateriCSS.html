@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Materi CSS - Around HTML&CSS</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">Around HTML&CSS</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a href="index.html" class="nav-link">Beranda</a></li>
+                    <li class="nav-item"><a href="materi.html" class="nav-link active">Materi</a></li>
+                    <li class="nav-item"><a href="tentang.html" class="nav-link">Tentang</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section id="materiCSS" class="py-5">
+        <div class="container">
+            <h2 class="text-center fw-bold mb-4">Materi CSS</h2>
+
+            <h3>1. Sejarah dan Pengertian CSS</h3>
+            <p><strong>Pengertian CSS:</strong> CSS (Cascading Style Sheets) adalah bahasa yang digunakan untuk mendesain tampilan dan format halaman web yang ditulis dalam HTML. Dengan CSS, kita bisa mengatur warna, font, tata letak, dan gaya visual lainnya.</p>
+            <p><strong>Sejarah CSS:</strong> CSS pertama kali dikembangkan pada tahun 1996 oleh World Wide Web Consortium (W3C). Versi pertama (CSS1) hanya mendukung format dasar. CSS2 (1998) dan CSS3 (2001) memperkenalkan fitur yang lebih kompleks seperti tata letak grid, efek animasi, dan lainnya.</p>
+
+            <h3>2. Dasar-Dasar CSS</h3>
+            <ul>
+                <li><strong>Struktur CSS:</strong></li>
+                <pre>
+Selektor (Selector): Menentukan elemen HTML mana yang akan di-styling.
+Deklarasi (Declaration): Terdiri dari properti (property) dan nilai (value).
+Aturan CSS (CSS Rule): Kombinasi selektor dan deklarasi.
+
+/* Contoh aturan CSS */
+p {
+    color: blue;
+    font-size: 16px;
+}
+                </pre>
+                <li><strong>Cara Mengintegrasikan CSS dengan HTML:</strong></li>
+                <ul>
+                    <li><strong>CSS Inline:</strong> Menulis CSS langsung di elemen HTML.</li>
+                    <pre>&lt;p style="color: red;"&gt;Teks berwarna merah.&lt;/p&gt;</pre>
+                    <li><strong>CSS Internal:</strong> Menulis CSS di dalam tag <code>&lt;style&gt;</code> pada bagian <code>&lt;head&gt;</code>.</li>
+                    <pre>
+&lt;style&gt;
+    body {
+        background-color: lightblue;
+    }
+&lt;/style&gt;
+                    </pre>
+                    <li><strong>CSS Eksternal:</strong> Menyimpan CSS dalam file .css terpisah dan menghubungkannya di HTML.</li>
+                    <pre>&lt;link rel="stylesheet" href="style.css"&gt;</pre>
+                </ul>
+            </ul>
+
+            <h3>3. Selektor CSS</h3>
+            <ul>
+                <li><strong>Selektor Tag:</strong> Memilih semua elemen HTML dengan nama tag tertentu.</li>
+                <pre>h1 { color: blue; }</pre>
+                <li><strong>Selektor ID:</strong> Memilih elemen dengan atribut id tertentu.</li>
+                <pre>#header { background-color: grey; }</pre>
+                <li><strong>Selektor Class:</strong> Memilih elemen dengan atribut class tertentu.</li>
+                <pre>.content { font-size: 14px; }</pre>
+                <li><strong>Selektor Atribut:</strong> Memilih elemen berdasarkan atribut tertentu.</li>
+                <pre>input[type="text"] { color: green; }</pre>
+            </ul>
+
+            <h3>4. Konsep Tata Letak (Layout) dalam CSS</h3>
+            <ul>
+                <li><strong>Display:</strong></li>
+                <ul>
+                    <li><strong>Block dan Inline:</strong> Mengatur cara elemen ditampilkan.</li>
+                    <pre>
+display: block; /* Mengisi ruang secara penuh */
+display: inline; /* Mengisi ruang sesuai konten */
+                    </pre>
+                    <li><strong>Flexbox:</strong> Digunakan untuk membuat tata letak fleksibel.</li>
+                    <pre>
+display: flex;
+justify-content: center;
+align-items: center;
+                    </pre>
+                    <li><strong>Grid:</strong> Mengatur layout berbasis grid yang dinamis.</li>
+                    <pre>
+display: grid;
+grid-template-columns: 1fr 1fr;
+grid-gap: 10px;
+                    </pre>
+                </ul>
+            </ul>
+
+            <h3>5. Responsivitas dengan CSS</h3>
+            <ul>
+                <li><strong>Media Query:</strong> Digunakan untuk menyesuaikan tampilan berdasarkan ukuran layar.</li>
+                <pre>
+@media (max-width: 600px) {
+    body {
+        background-color: lightblue;
+    }
+}
+                </pre>
+                <li><strong>Unit Relatif dan Tetap:</strong></li>
+                <ul>
+                    <li>Unit Tetap: px (piksel), cm (centimeter).</li>
+                    <li>Unit Relatif: %, <code>vw</code> (viewport width), <code>vh</code> (viewport height), <code>em</code>, <code>rem</code>.</li>
+                </ul>
+            </ul>
+
+            <h3>6. Fitur dan Teknik CSS Tingkat Lanjut</h3>
+            <ul>
+                <li><strong>Animasi dan Transisi:</strong></li>
+                <pre>
+/* Contoh Transisi */
+box {
+    transition: all 0.3s ease;
+}
+
+/* Contoh Animasi */
+@keyframes example {
+    from { background-color: red; }
+    to { background-color: yellow; }
+}
+.box {
+    animation: example 3s infinite;
+}
+                </pre>
+                <li><strong>PseudoClass dan PseudoElement:</strong></li>
+                <pre>
+a:hover { color: red; } /* Mengubah warna link saat dihover */
+p::first-line { font-weight: bold; } /* Mengubah gaya teks baris pertama paragraf */
+                </pre>
+                <li><strong>CSS Variables:</strong></li>
+                <pre>
+:root {
+    --main-bg-color: #f0f0f0;
+}
+body {
+    background-color: var(--main-bg-color);
+}
+                </pre>
+                <li><strong>CSS Gradients:</strong> Membuat gradien warna untuk latar belakang elemen.</li>
+                <pre>
+background: linear-gradient(to right, red, yellow);
+                </pre>
+            </ul>
+
+            <h3>Kesimpulan</h3>
+            <p>CSS adalah bahasa stylesheet yang mengatur tampilan halaman web yang telah dibangun dengan HTML. CSS memungkinkan kita mengatur warna, font, tata letak, dan efek visual untuk menciptakan desain yang responsif, elegan, dan user-friendly.</p>
+        </div>
+
+        <div class="text-center">
+            <a href="materi.html" class="btn btn-secondary">Kembali ke Materi</a>
+        </div>
+    </section>
+
+    <footer class="bg-dark text-white py-3">
+        <div class="container text-center">
+            <p>&copy; 2024 Belajar Coding. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

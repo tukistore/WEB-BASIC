@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Materi - Around HTML&CSS</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">Around HTML&CSS</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a href="index.html" class="nav-link">Beranda</a></li>
+                    <li class="nav-item"><a href="materi.html" class="nav-link active">Materi</a></li>
+                    <li class="nav-item"><a href="tentang.html" class="nav-link">Tentang</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Materi Section -->
+    <section id="materi" class="py-5">
+        <div class="container">
+            <div class="row row-cols-1 row-cols-md-2 g-4">
+                <!-- Card HTML -->
+                <div class="col">
+                    <div class="card shadow-sm h-100">
+                        <img src="html.png" class="card-img-top" alt="HTML Logo">
+                        <div class="card-body text-center">
+                            <h5 class="card-title fw-bold">Materi HTML</h5>
+                            <p class="card-text">Pelajari dasar-dasar HTML dan buat struktur halaman web yang menarik.</p>
+                            <a href="isiMateriHTML.html" class="btn btn-primary">Lihat Materi</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card CSS -->
+                <div class="col">
+                    <div class="card shadow-sm h-100">
+                        <img src="css.png" class="card-img-top" alt="CSS Logo">
+                        <div class="card-body text-center">
+                            <h5 class="card-title fw-bold">Materi CSS</h5>
+                            <p class="card-text">Pahami cara mendesain halaman web dengan CSS untuk tampilan yang menarik.</p>
+                            <a href="isiMateriCSS.html" class="btn btn-primary">Lihat Materi</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-3">
+        <div class="container text-center">
+            <p>&copy; 2024 Belajar Coding. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
